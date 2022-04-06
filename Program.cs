@@ -1,37 +1,36 @@
 ﻿using System;
 
-namespace imc
+namespace C__1_Mod_DS_T
 {
     class Program
     {
         static void Main(string[] args)
         {
+            float w;
             float x;
             float y;
-            double r;
+            float z;
+            float r;
 
-            Console.WriteLine("digita o valor a altura");
+            Console.WriteLine("digita o valor de w");
+            w=float.Parse(Console.ReadLine());
+            Console.WriteLine("digita o valor de x");
             x=float.Parse(Console.ReadLine());
-            Console.WriteLine("digita o valor o peso");
+            Console.WriteLine("digita o valor de y");
             y=float.Parse(Console.ReadLine());
-            r=y/(Math.Pow(x,2));
-
-            if(r>=18.5&&r<25)
+            Console.WriteLine("digita o valor de z");
+            z=float.Parse(Console.ReadLine());
+         
+            r=(w+x+y+z)/4;
+            if(r>=6)
             {
-                Console.WriteLine($"IMC Normal de = {r}");
+                Console.WriteLine($"Aluno Aprovado, com a média de {r}");
             } 
-            else if (r>=25&&r<30)
+            else if (r<6)
             {
-                Console.WriteLine($"IMC Sobrepeso de = {r}");   
-            }
-            else if (r>=30&&r<40)
-            {
-                Console.WriteLine($"IMC Obesidade de = {r}"); 
-            }
-            else if (r>=40)
-            {
-                Console.WriteLine($"IMC Obesidade Mórbida de = {r}"); 
+                Console.WriteLine($"Aluno Reprovado, com a média de {r}");
             }
         }
     }
 }
+
